@@ -35,3 +35,14 @@ C:\ASP.NET Core Refresher\ASP.NET-Core-Web-API-Refresher\MagicVilla_VillaAPI\Mag
 C:\ASP.NET Core Refresher\ASP.NET-Core-Web-API-Refresher\MagicVilla_VillaAPI\MagicVilla_VillaAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\ASP.NET Core Refresher\ASP.NET-Core-Web-API-Refresher\MagicVilla_VillaAPI\MagicVilla_VillaAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\ASP.NET Core Refresher\ASP.NET-Core-Web-API-Refresher\MagicVilla_VillaAPI\MagicVilla_VillaAPI\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\ASP.NET Core Refresher\ASP.NET-Core-Web-API-Refresher\MagicVilla_VillaAPI\MagicVilla_VillaAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\ASP.NET Core Refresher\ASP.NET-Core-Web-API-Refresher\MagicVilla_VillaAPI\MagicVilla_VillaAPI\bin\Debug\net8.0\Serilog.dll
+C:\ASP.NET Core Refresher\ASP.NET-Core-Web-API-Refresher\MagicVilla_VillaAPI\MagicVilla_VillaAPI\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\ASP.NET Core Refresher\ASP.NET-Core-Web-API-Refresher\MagicVilla_VillaAPI\MagicVilla_VillaAPI\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\ASP.NET Core Refresher\ASP.NET-Core-Web-API-Refresher\MagicVilla_VillaAPI\MagicVilla_VillaAPI\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\ASP.NET Core Refresher\ASP.NET-Core-Web-API-Refresher\MagicVilla_VillaAPI\MagicVilla_VillaAPI\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\ASP.NET Core Refresher\ASP.NET-Core-Web-API-Refresher\MagicVilla_VillaAPI\MagicVilla_VillaAPI\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\ASP.NET Core Refresher\ASP.NET-Core-Web-API-Refresher\MagicVilla_VillaAPI\MagicVilla_VillaAPI\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\ASP.NET Core Refresher\ASP.NET-Core-Web-API-Refresher\MagicVilla_VillaAPI\MagicVilla_VillaAPI\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\ASP.NET Core Refresher\ASP.NET-Core-Web-API-Refresher\MagicVilla_VillaAPI\MagicVilla_VillaAPI\bin\Debug\net8.0\Serilog.Sinks.File.dll
+C:\ASP.NET Core Refresher\ASP.NET-Core-Web-API-Refresher\MagicVilla_VillaAPI\MagicVilla_VillaAPI\bin\Debug\net8.0\System.Text.Json.dll
