@@ -1,4 +1,5 @@
 ﻿using MagicVilla_VillaAPI.Data;
+using MagicVilla_VillaAPI.Logging;
 using MagicVilla_VillaAPI.Models;
 using MagicVilla_VillaAPI.Models.DTO;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -12,30 +13,50 @@ namespace MagicVilla_VillaAPI.Controllers
     [ApiController]
     public class VillaAPIController : ControllerBase
     {
+        //private readonly ILogger<VillaAPIController> _logger;
+
+        //public VillaAPIController(ILogger<VillaAPIController> logger) 
+        //{
+        //    _logger = logger;
+        //}
+        private readonly ILogging _logger;
+        public VillaAPIController(ILogging logger)
+        {
+            
+          _logger = logger;
+        }
+
+
         [HttpGet]
         public ActionResult<IEnumerable<VillaDTO>> GetVillas()
         {
+           _logger.Log("Getting All Villas","");
             return Ok(VillaStore.villaList);
 
         }
 
-
-        [HttpGet("{Id:int}", Name = "GetVilla")]
-
-        public ActionResult<VillaDTO> GetVilla(int Id)
+        [HttpGet("{id:int}", Name = "GetVilla")]
+        public ActionResult<VillaDTO> GetVilla(int id)
         {
-            if (Id == 0)
+            _logger.Log($"Attempting to get villa with ID: {id}", "info");
+            _logger.Log($"Number of villas in list: {VillaStore.villaList.Count}", "info");
+
+            if (id == 0)
             {
+                _logger.Log($"Get villa error with Id {id}", "error");
                 return BadRequest();
             }
-            var villa = VillaStore.villaList.FirstOrDefault(item => item.Id == Id);
+
+            var villa = VillaStore.villaList.FirstOrDefault(item => item.Id == id);
 
             if (villa == null)
             {
+                _logger.Log($"Villa with ID {id} not found", "warning");
                 return NotFound();
             }
 
-            return Ok(VillaStore.villaList.FirstOrDefault(item => item.Id == Id));
+            _logger.Log($"Successfully retrieved villa with ID: {id}", "info");
+            return Ok(villa);
         }
 
         [HttpPost]
@@ -56,6 +77,7 @@ namespace MagicVilla_VillaAPI.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
             villaDTO.Id = VillaStore.villaList.OrderByDescending(item => item.Id).FirstOrDefault().Id + 1;
+
             VillaStore.villaList.Add(villaDTO);
 
             return CreatedAtRoute("GetVilla", new { id = villaDTO.Id }, villaDTO);
@@ -92,8 +114,7 @@ namespace MagicVilla_VillaAPI.Controllers
 
             return NoContent();
         }
-
-        [HttpPatch]
+        [HttpPatch("{id:int}")]
 
         public IActionResult UpdatePartialVilla(int id, JsonPatchDocument<VillaDTO> patchDTO)
         {
