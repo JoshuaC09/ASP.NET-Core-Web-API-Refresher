@@ -19,7 +19,29 @@ Status code: Status Codes for Operation Result.
     * 500 - Internal Server Error
 
 
-Header: 
-Content
+Header: Contain MetaData
+* Content Type: Content's Format
+* Content Length: Size of the Content
+* Expires: When is this invalid
+* More Headers
+
+
+Content/Body: Contain json result, html, css, xml or json
+
+
+
+DTO: DTO's provide a wrapper between the entity or the database model and what is being exposed from the API
+
+Dependency injection life time
+
+Add Singeleton - Created when the application starts and that object will be used every time an application request an implementation.
+
+Add Scope -  Basically for every request it will be create a new object  and provide that where it is requested
+
+Add Transient - Means that every time that object is accessed it is created. Even in one request if that object is accessed 10 times  it will create 10 different objects of that and assign that where its needed.
+
+
+
+	 
 
 
